@@ -1,0 +1,19 @@
+#  _____ ______  _____   _     _           _ _   
+# /  __ \| ___ \/  ___| | |   (_)         (_) |  
+# | /  \/| |_/ /\ `--.  | |    _ _ __ ___  _| |_ 
+# | |    |  __/  `--. \ | |   | | '_ ` _ \| | __|
+# | \__/\| |    /\__/ / | |___| | | | | | | | |_ 
+#  \____/\_|    \____/  \_____/_|_| |_| |_|_|\__|
+# -----------------------------------------
+#   Configuration File for CPS Limit
+# -----------------------------------------
+
+# The maximum allowed clicks per second.
+# Any click above this rate (within a sliding 1s + ping window) will be cancelled.
+# Default: 20
+cps-threshold: 20
+
+# When a player actually lands a hit while over the CPS threshold,
+# further hits are cancelled for this many seconds.
+# Default: 2.0
+hit-miss-cooldown-seconds: 2.0

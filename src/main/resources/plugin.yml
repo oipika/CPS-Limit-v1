@@ -1,0 +1,6 @@
+name: "CPSLimiter"
+main: "dev.ikara.cpslimiter.CpsLimit"
+version: 1.0-SNAPSHOT
+description: Limits amount of cps with cooldowns & aims to fix No KB with high cps.
+authors:
+  - oipika
