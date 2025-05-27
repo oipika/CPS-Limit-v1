@@ -1,6 +1,21 @@
-name: "CPSLimiter"
-main: "dev.ikara.cpslimiter.CpsLimit"
+name: CPSLimiter
 version: 1.0-SNAPSHOT
-description: Limits amount of cps with cooldowns & aims to fix No KB with high cps.
+main: dev.ikara.cpslimiter.CpsLimit
+description: CPS limiter with live debug alerts and bypass permission
 authors:
   - oipika
+
+commands:
+  cpsdebug:
+    description: Toggle live CPS debug alerts
+    usage: /cpsdebug
+    permission: cpslimiter.debug
+
+permissions:
+  cpslimiter.debug:
+    description: Allows toggling CPS debug alerts
+    default: op
+
+  cpslimiter.bypass:
+    description: Completely bypass CPS limits, cooldowns, and cancellations
+    default: op
