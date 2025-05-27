@@ -1,6 +1,6 @@
 # CPS Limiter
 
-Spigot Plugin which limits the rate a minecraft player can interact with the world to prevent cheating like using an auto clicker.
+Spigot Plugin which limits the rate a minecraft player can interact with the world to lessen the advantage of cheats such as autoclickers.
 
 ## Installation
 
@@ -10,7 +10,7 @@ Spigot Plugin which limits the rate a minecraft player can interact with the wor
 
 ## Plugin Configuration
 
-In `plugins/CPS-Limiter/config.yml` from your Spigot server directory, there are the following options:
+In `plugins/CPSLimiter/config.yml` from your Spigot server directory, there are the following options:
 
 - CPS Threshold: [Integer] (default 20) - The amount of interactions a player can trigger every second before hitting max threshold.
 
