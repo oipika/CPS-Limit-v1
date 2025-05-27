@@ -14,7 +14,7 @@ In `plugins/CPS-Limiter/config.yml` from your Spigot server directory, there are
 
 - CPS Threshold: [Integer] (default 20) - The amount of interactions a player can trigger every second before hitting max threshold.
 
-- Hit Miss Cooldown: [Integer] (default 2.0) - The amount of time the player has to wait before being able to hit again after being penalized for exceeding the max cps threshold.
+- Hit Miss Cooldown: [Integer] (default 1.0) - The amount of time the player has to wait before being able to hit again after being penalized for exceeding the max cps threshold.
 
 ## Wiki
 
