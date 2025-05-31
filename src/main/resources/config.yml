@@ -8,34 +8,51 @@
 #   Configuration File for CPS Limit
 # -----------------------------------------
 
-
-#   / ___|  _ \/ ___|
-#  | |   | |_) \___ \
-#  | |___|  __/ ___) |
-#   \____|_|   |____/
-# The maximum allowed clicks per second.
-# Any click above this rate (within a sliding 1s + ping window) will be cancelled.
-# Default: 20
-cps-threshold:
+# The maximum allowed clicks per second (overall default).
+# (Left and right can be overridden in profiles below.)
+cps-threshold-default:
   left: 18
   right: 20
-# Fallback CPS Threshold
-cps-threshold-default: 20
+
 # When a player actually lands a hit while over the CPS threshold,
-# further hits are cancelled for this many seconds.
-# Default: 1.0
+# further hits are canceled for this many seconds.
 hit-miss-cooldown-seconds: 1.0
 
+# -------------------------
+# GLOBAL PENALTY SETTINGS |
+# -------------------------
+# penalty-type: one of { kick, no_damage, mitigate }
+#   • kick      → kick the offender immediately
+#   • no_damage → offender cannot deal ANY damage for penalty-duration
+#   • mitigate  → offender’s damage is reduced by a percentage
+penalty-type: no_damage
 
-#  |  _ \ _ __ ___  / _(_) | ___ 
-#  | |_) | '__/ _ \| |_| | |/ _ \
-#  |  __/| | | (_) |  _| | |  __/
-#  |_|   |_|  \___/|_| |_|_|\___|                             
-# profiles section (all keys optional; any missing falls back to defaults above)
+# Only used if penalty-type = "mitigate":
+#   integer 0–100.  (e.g. 50 means “50% of normal damage.”)
+mitigate-percentage: 50
+
+# How many seconds “no_damage” or “mitigate” remains in effect.
+# (If penalty-type = kick, this is ignored.)
+penalty-duration-seconds: 1.0
+
+# ----------------------
+# Profile‐specific settings
+# ----------------------
 profiles:
   vip:
     permission: cpslimiter.profile.vip
     cps-threshold:
-      left: 20
+      left: 19
       right: 20
     hit-miss-cooldown-seconds: 0.5
+    penalty-type: no_damage
+    mitigate-percentage: 30
+
+  mvp:
+    permission: cpslimiter.profile.mvp
+    cps-threshold:
+      left: 20
+      right: 20
+    hit-miss-cooldown-seconds: 3
+    penalty-type: mitigate
+    mitigate-percentage: 30
