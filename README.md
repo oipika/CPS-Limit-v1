@@ -2,6 +2,10 @@
 
 Spigot Plugin which limits the rate a minecraft player can interact with the world to lessen the advantage of cheats such as autoclickers.
 
+## Disclaimer
+
+This version of the plugin in unmaintained and will not be updated. If you would like to use a much better version thats been fully recoded for better performance, accuracy, & maintainability, check out our spigot page for the new one.
+
 ## Installation
 
 1) Download the zip file & extract the content
